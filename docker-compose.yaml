@@ -1,0 +1,26 @@
+version: '3'
+services:
+  authprovider:
+    image:
+      oryhydrastub
+    ports:
+    - 8080:8080
+
+  ory-hydra-example-hydra:
+    image:
+      # do we really want to use the 'beta' version?
+      oryd/hydra:v1.0.0-beta.8
+    command: 
+      serve all
+    ports:
+    - 9000:4444
+    - 9001:4445
+    environment:
+      # SYSTEM_SECRET=$SYSTEM_SECRET
+    - DATABASE_URL=memory
+    - OAUTH2_ISSUER_URL=https://localhost:9000/
+    - OAUTH2_CONSENT_URL=http://localhost:8080/oryhydrastub-1.0/authprovider/consent
+    - OAUTH2_LOGIN_URL=http://localhost:8080/oryhydrastub-1.0/authprovider/login
+
+
+    
