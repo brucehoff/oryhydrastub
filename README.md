@@ -49,3 +49,8 @@ Note:  This demo currently does not use TLS, does not use a Docker network to co
 
 [The source code for the server](https://github.com/ory/hydra)
 
+[API docs](https://www.ory.sh/docs/api/hydra/)
+
+[Strong opinions on how to be secure](https://www.ory.sh/oauth2-for-mobile-app-spa-browser/)
+
+
