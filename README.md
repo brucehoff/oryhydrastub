@@ -8,6 +8,7 @@ To run the end-to-end test:
 (1) start up Ory Hydra and the stubbed out auth service:
 
 ```
+docker build -t oryhydrastub .
 docker-compose up
 ```
 (2) Register the client ID and secret:

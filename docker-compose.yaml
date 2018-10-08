@@ -6,6 +6,7 @@ services:
     ports:
     - 8080:8080
     environment:
+    # note this is the 'private' endpoint
     - HYDRA_ENDPOINT=http://10.0.0.87:9001
 
   ory-hydra-example-hydra:
